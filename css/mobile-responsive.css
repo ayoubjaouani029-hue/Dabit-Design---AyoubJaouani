@@ -1,0 +1,342 @@
+
+/* ============================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet and Mobile - 768px and below */
+@media (max-width: 768px) {
+  /* Global Section Adjustments */
+  section {
+    padding: 60px 15px;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Hero Section Mobile */
+  .hero {
+    padding: 80px 20px 60px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .profile-img-container {
+    width: 200px;
+    height: 200px;
+    order: -1; /* Move image above text on mobile */
+  }
+
+  /* Hero Video - Optimize for mobile */
+  .hero-video-bg {
+    display: block !important;
+    opacity: 0.5; /* Slightly reduce on mobile for better text visibility */
+  }
+
+  /* Fallback Background for Hero on Mobile */
+  .hero {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    /* Optional: Add a subtle pattern or static image here if desired */
+  }
+
+  /* Reduce wash/blur on heavy elements for performance */
+  .navbar, .about-text, .card-content {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(20, 20, 20, 0.95) !important; /* Solid fallback */
+  }
+
+  /* About Section Mobile */
+  .slider-3d-container {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  .slider-item {
+    width: 80px;
+    height: 120px;
+    margin-left: -40px;
+    margin-top: -80px;
+  }
+
+  .slider-item {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  }
+
+  .card-content {
+    border-radius: 10px;
+  }
+
+  .software-icon {
+    font-size: 1.8rem;
+  }
+
+  .software-img-wrapper img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .slider-item span {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Shadow adjustment for mobile */
+  #about::before {
+    height: 150px;
+  }
+
+  /* Portfolio Section Mobile */
+  .portfolio-categories {
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .modal-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Achievements Section Mobile */
+  .achievement-switcher {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .switcher-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .achievement-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .achievement-icon {
+    font-size: 3rem;
+  }
+
+  /* Contact Section Mobile */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Game Button Mobile */
+  #game-trigger-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #game-trigger-icon {
+    font-size: 1.5rem;
+  }
+
+  /* Cursor - Hide on mobile/touch devices */
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
+
+/* Small Mobile - 480px and below */
+@media (max-width: 480px) {
+  /* Further reduce sizes for very small phones */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-name {
+    font-size: 2rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .profile-img-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* About Section - Further reduce slider */
+  .slider-3d-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .slider-item {
+    width: 70px;
+    height: 100px;
+    margin-left: -35px;
+  }
+
+  .slider-item {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(160px);
+  }
+
+  .software-icon {
+    font-size: 1.5rem;
+  }
+
+  .software-img-wrapper img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  /* Navbar - Further adjustments */
+  .navbar {
+    width: 95%;
+    padding: 8px 15px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  /* Portfolio */
+  .filter-btn {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Contact */
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-card .value {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Game Button */
+  #game-trigger-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  #game-trigger-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .profile-img-container {
+    width: 150px;
+    height: 150px;
+    order: 0;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  section {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,67 @@
+/* Collection Button Special Styling */
+.collection-btn {
+  background: linear-gradient(135deg, var(--accent-color) 0%, rgba(0, 255, 255, 0.6) 100%) !important;
+  color: var(--bg-dark) !important;
+  font-weight: 700;
+  border: 2px solid var(--accent-color) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  font-size: 1.5rem;
+  padding: 8px 16px !important;
+  min-width: 50px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.collection-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.collection-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.8) 0%, var(--accent-color) 100%) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+.collection-btn.active {
+  background: var(--accent-color) !important;
+  box-shadow: 0 0 30px var(--accent-color);
+}
+
+.collection-btn.collection-hidden {
+  background: linear-gradient(135deg, rgba(255, 100, 100, 0.6) 0%, rgba(255, 50, 50, 0.8) 100%) !important;
+  border-color: #ff6b6b !important;
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+}
+
+.collection-btn.collection-hidden:hover {
+  box-shadow: 0 0 25px rgba(255, 107, 107, 0.6);
+}
+
+/* Smooth transitions for project cards */
+.project-card,
+.project-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

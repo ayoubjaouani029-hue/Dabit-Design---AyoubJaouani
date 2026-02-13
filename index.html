@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional designer with a passion for creating unique visual experiences. Specializing in graphic design, 3D modeling, and video editing. My work combines artistic creativity with technical precision to deliver compelling visual narratives."
+    />
+    <meta
+      name="keywords"
+      content="Graphic Designer, 3D Artist, Video Editor, Dabit Design, Ayoub Jaouani, Creative Portfolio, Branding, Motion Graphics, Visual Design, Morocco Designer, Adobe Photoshop, Adobe Illustrator, InDesign, Premiere Pro, After Effects, Blender 3D, 3ds Max, Unreal Engine 5, Logo Design, Social Media Graphics, Animation, Montage, Visual Identity, Digital Art, Creative Director, Freelance Designer Morocco"
+    />
+    <title>Dabit Design | Ayoub Jaouani</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Tajawal:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/mobile-responsive.css" />
+    <link rel="stylesheet" href="css/collection-button.css" />
+  </head>
+  <body class="lang-en">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader-main">
+        <div class="loaders">
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+        </div>
+        <div class="loadersB">
+          <div class="loaderA">
+            <div class="ball0"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball1"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball2"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball3"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball4"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball5"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball6"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball7"></div>
+          </div>
+          <div class="loaderA">
+            <div class="ball8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background -->
+    <div class="picasso-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">Dabit Design</div>
+      <div class="nav-links">
+        <div class="nav-indicator"></div>
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="#achievements" data-i18n="nav_achievements">Achievements</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+        >
+          <path
+            d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
+          ></path>
+        </svg>
+      </button>
+      <button id="lang-toggle">AR / EN</button>
+      <div class="color-picker-container">
+        <input
+          type="color"
+          id="accent-color-picker"
+          value="#00ffff"
+          aria-label="Choose Accent Color"
+        />
+        <button
+          id="reset-color-btn"
+          aria-label="Reset Color to Default"
+          title="Reset Color"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+          </svg>
+        </button>
+      </div>
+      <button class="hamburger-menu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="mobile-overlay"></div>
+      <div class="mobile-menu">
+        <button class="close-menu" aria-label="Close Menu">&times;</button>
+        <a href="#home" data-i18n="nav_home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="#about" data-i18n="nav_about">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>About</span>
+        </a>
+        <a href="#portfolio" data-i18n="nav_portfolio">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Portfolio</span>
+        </a>
+        <a href="#achievements" data-i18n="nav_achievements">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline
+              points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+            ></polyline>
+          </svg>
+          <span>Achievements</span>
+        </a>
+        <a href="#contact" data-i18n="nav_contact">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contact</span>
+        </a>
+
+        <!-- Mobile Settings (Premium Upgrade) -->
+        <div class="mobile-settings">
+          <button id="mobile-theme-toggle" class="mobile-option-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <span data-i18n="theme_text">Theme</span>
+          </button>
+          <button id="mobile-lang-toggle" class="mobile-option-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+            <span>AR / EN</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+          <source src="assets/video/dragon.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-name" data-i18n="hero_name">Ayoub Jaouani</h1>
+            <h2 class="hero-title" data-i18n="hero_title">Dabit Design</h2>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+              Graphic Design | 3D Artist | Video Editor
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="#portfolio"
+                class="btn btn-primary"
+                data-i18n="btn_projects"
+                >View Projects</a
+              >
+              <a
+                href="#contact"
+                class="btn btn-secondary"
+                data-i18n="btn_contact"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+          <div class="profile-img-container">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Ayoub Jaouani"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h2 class="section-title" data-i18n="about_title">About Me</h2>
+        <div class="about-content">
+          <div class="about-content">
+            <div class="about-content">
+              <div class="slider-3d-container">
+                <div class="slider-3d-cylinder">
+                  <!-- 8 Items for a full circle -->
+                  <div class="slider-item" style="--i: 1">
+                    <div class="card-content">
+                      <div class="software-icon adobe-ps">Ps</div>
+                      <span>Photoshop</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 2">
+                    <div class="card-content">
+                      <div class="software-icon adobe-ai">Ai</div>
+                      <span>Illustrator</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 3">
+                    <div class="card-content">
+                      <div class="software-icon adobe-id">Id</div>
+                      <span>InDesign</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 4">
+                    <div class="card-content">
+                      <div class="software-icon adobe-pr">Pr</div>
+                      <span>Premiere</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 5">
+                    <div class="card-content">
+                      <div class="software-icon adobe-ae">Ae</div>
+                      <span>After Effects</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 6">
+                    <div class="card-content">
+                      <div class="software-img-wrapper">
+                        <img
+                          src="assets/images/uploaded_logo_3dsmax.png"
+                          alt="3ds Max"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span>3ds Max</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 7">
+                    <div class="card-content">
+                      <div class="software-img-wrapper">
+                        <img
+                          src="assets/images/uploaded_logo_blender.png"
+                          alt="Blender"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span>Blender</span>
+                    </div>
+                  </div>
+                  <div class="slider-item" style="--i: 8">
+                    <div class="card-content">
+                      <div class="software-img-wrapper">
+                        <img
+                          src="assets/images/uploaded_logo_unreal.png"
+                          alt="Unreal"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span>Unreal 5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text separate but integrated visually -->
+              <div class="about-text-center">
+                <p class="about-text" data-i18n="about_text">
+                  Professional designer with a passion for creating unique
+                  visual experiences. Specializing in graphic design, 3D
+                  modeling, and video editing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio">
+        <canvas id="portfolio-stars"></canvas>
+        <h2 class="section-title" data-i18n="portfolio_title">My Work</h2>
+
+        <div class="portfolio-categories">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-i18n="filter_all"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="logo-branding"
+            data-i18n="filter_logo"
+          >
+            Logo & Branding
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="graphic"
+            data-i18n="filter_graphic"
+          >
+            Graphic Design
+          </button>
+          <button class="filter-btn" data-filter="3d" data-i18n="filter_3d">
+            3D Art
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="video"
+            data-i18n="filter_video"
+          >
+            Video Editing
+          </button>
+          <button
+            class="filter-btn collection-btn"
+            id="collection-toggle-btn"
+            data-filter="collection"
+            title="Toggle Collection View"
+          >
+            📁
+          </button>
+        </div>
+
+        <!-- Grid will be populated by JS -->
+        <div class="portfolio-grid" id="portfolio-grid"></div>
+      </section>
+
+      <!-- Project Modal (Lightbox) -->
+      <div id="project-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <button class="modal-nav prev-btn" aria-label="Previous Image">
+          &#10094;
+        </button>
+        <img class="modal-content" id="modal-img" />
+        <button class="modal-nav next-btn" aria-label="Next Image">
+          &#10095;
+        </button>
+        <div id="modal-caption"></div>
+      </div>
+
+      <!-- My Achievements Section -->
+      <section id="achievements" class="achievements">
+        <h2 class="section-title" data-i18n="achievements_title">
+          My Achievements
+        </h2>
+
+        <!-- Achievement Switcher -->
+        <div class="achievement-switcher">
+          <button
+            class="switcher-btn active"
+            data-target="slide-1"
+            data-i18n="book_btn"
+          >
+            Book
+          </button>
+          <button
+            class="switcher-btn"
+            data-target="slide-2"
+            data-i18n="scenario_btn"
+          >
+            Scenario
+          </button>
+          <button
+            class="switcher-btn"
+            data-target="slide-3"
+            data-i18n="podcast_btn"
+          >
+            Podcast
+          </button>
+        </div>
+
+        <div class="achievements-slider-container">
+          <div class="achievement-slide active" id="slide-1">
+            <div class="achievement-content">
+              <div class="achievement-icon">
+                📖
+                <!-- 3D Book Visual -->
+                <div class="book-visual">
+                  <div class="book-wings">
+                    <div class="wing left"></div>
+                    <div class="spine"></div>
+                    <div class="wing right"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 data-i18n="book_title">Book: Life Lesson</h3>
+              <button class="read-more-btn" data-i18n="read_more">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          <div class="achievement-slide" id="slide-2">
+            <div class="achievement-content">
+              <div class="achievement-icon">
+                🎬
+                <!-- 3D Clapperboard Visual -->
+                <div class="clapperboard-visual">
+                  <div class="clapper-arm"></div>
+                  <div class="clapper-body"></div>
+                </div>
+              </div>
+              <h3 data-i18n="scenario_title">
+                Scenario: I wish I hadn't gone out
+              </h3>
+              <button class="read-more-btn" data-i18n="read_more">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          <div class="achievement-slide" id="slide-3">
+            <div class="achievement-content">
+              <div class="achievement-icon">
+                🎙️
+                <!-- 3D YouTube Visual -->
+                <div class="youtube-visual">
+                  <div class="play-button">
+                    <div class="play-triangle"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 data-i18n="podcast_title">Podcast: Design & Tech</h3>
+              <a
+                href="https://www.youtube.com/@ayoubjaouani"
+                target="_blank"
+                class="read-more-btn"
+                data-i18n="watch_podcasts"
+                >Watch my podcasts</a
+              >
+            </div>
+          </div>
+
+          <!-- Navigation Dots -->
+          <div class="slider-dots">
+            <span
+              class="dot active"
+              onclick="
+                currentSlide(1);
+                event.stopPropagation();
+              "
+            ></span>
+            <span
+              class="dot"
+              onclick="
+                currentSlide(2);
+                event.stopPropagation();
+              "
+            ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Text Modal -->
+      <div id="text-modal" class="text-modal">
+        <div class="text-modal-content">
+          <span class="close-text-modal" onclick="closeTextModal()"
+            >&times;</span
+          >
+          <h2 id="text-modal-title"></h2>
+          <div id="text-modal-body"></div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+        <div class="contact-grid">
+          <!-- Phone Card -->
+          <a href="tel:+212614854092" class="contact-card">
+            <div class="icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="contact-icon feather feather-phone"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+            </div>
+            <h3 data-i18n="contact_phone">Phone</h3>
+            <span class="value">+212 614 854 092</span>
+          </a>
+
+          <!-- Email Card -->
+          <a href="mailto:ayoubjaouani029@gmail.com" class="contact-card">
+            <div class="icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="contact-icon feather feather-mail"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <h3 data-i18n="contact_email">Email</h3>
+            <span class="value">ayoubjaouani029@gmail.com</span>
+          </a>
+
+          <!-- Instagram Card -->
+          <a
+            href="https://instagram.com/ayoub___jaouani"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="contact-icon feather feather-instagram"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="contact_instagram">Instagram</h3>
+            <span class="value">@ayoub___jaouani</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Dabit Design. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Color Splashes -->
+    <div class="color-splash splash-1"></div>
+    <div class="color-splash splash-2"></div>
+
+    <!-- Glitch Overlay Transition -->
+    <div class="glitch-overlay" id="glitch-overlay">
+      <div class="glitch-slice"></div>
+      <div class="glitch-slice"></div>
+      <div class="glitch-slice"></div>
+      <div class="glitch-slice"></div>
+      <div class="glitch-slice"></div>
+    </div>
+
+    <!-- Pixel Overlay (Contact) -->
+    <div class="pixel-overlay" id="pixel-overlay"></div>
+
+    <!-- Curtain Overlay (Nav) -->
+    <div class="curtain-overlay" id="curtain-overlay">
+      <div class="curtain-left"></div>
+      <div class="curtain-right"></div>
+    </div>
+
+    <!-- Game Floating Button -->
+    <button
+      id="game-trigger-btn"
+      aria-label="Play Design Persona Game"
+      title="Discover Your Design Persona"
+    >
+      <span id="game-trigger-icon">🎮</span>
+    </button>
+
+    <!-- Game Modal -->
+    <div id="game-modal">
+      <div class="game-container">
+        <span class="close-game">&times;</span>
+        <div id="game-content">
+          <!-- Content injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game_data.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

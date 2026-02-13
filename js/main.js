@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemsPerCategory = 5;
     
     // --- Elements ---
-    // --- Elements ---
+
     const langToggleBtn = document.getElementById('lang-toggle');
     const body = document.body;
     const portfolioGrid = document.getElementById('portfolio-grid');
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguageModal(); // New Feature
 
     // --- Navbar Indicator Logic ---
-    // ... (existing code) ...
+
 
     function initLanguageModal() {
         const modal = document.getElementById('language-modal');
@@ -144,41 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rootMargin: "-50px 0px -50px 0px" 
         };
 
-    // --- Mobile Menu Toggle ---
-    const hamburgerBtn = document.querySelector('.hamburger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileOverlay = document.querySelector('.mobile-overlay');
-    const closeMenuBtn = document.querySelector('.close-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
-    if (hamburgerBtn && mobileMenu) {
-        function toggleMenu(show) {
-            if (show) {
-                mobileMenu.classList.add('active');
-                if (mobileOverlay) mobileOverlay.classList.add('active');
-            } else {
-                mobileMenu.classList.remove('active');
-                if (mobileOverlay) mobileOverlay.classList.remove('active');
-            }
-        }
-
-        hamburgerBtn.addEventListener('click', () => toggleMenu(true));
-
-        if (closeMenuBtn) {
-            closeMenuBtn.addEventListener('click', () => toggleMenu(false));
-        }
-
-        if (mobileOverlay) {
-            mobileOverlay.addEventListener('click', () => toggleMenu(false));
-        }
-
-        // Close when clicking a link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => toggleMenu(false));
-        });
-        
-        // Close when clicking outside logic is handled by overlay click
-    }
 
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -442,8 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Achievements Logic (Grid Mode) ---
-    // --- Achievements Logic (Switcher Mode) ---
+
     function initAchievementsSlider() {
         const switcherBtns = document.querySelectorAll('.switcher-btn');
         const slides = document.querySelectorAll('.achievement-slide');
@@ -890,7 +855,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="project-inner" onclick="window.open('https://www.youtube.com/@AYOUBGAMES-r7v', '_blank')">
                 <div class="project-img-container">
                     <div class="icon-wrapper youtube-wrapper">
-                        <img src="assets/images/youtube_icon.png" alt="YouTube Channel" class="youtube-custom-icon">
+                        <img src="assets/images/youtube_icon.png" alt="YouTube Channel" class="youtube-custom-icon" loading="lazy">
                     </div>
                 </div>
                 <div class="project-info">

@@ -425,14 +425,14 @@ section {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  /* Borders removed as requested */
+
 }
 
 .hero-title {
   font-size: 2rem;
   color: var(--accent-color);
   margin-bottom: 20px;
-  /* Borders removed as requested */
+
 }
 
 .hero-subtitle {
@@ -728,20 +728,7 @@ section {
                           */
 }
 
-/* Experimental: Attempt to place text IN CENTER of cylinder */
-/*
-.about-content {
-    position: relative;
-    height: 500px;
-}
-.about-text-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-}
-*/
+
 /* Sticking to separate for readability first, user requested "clearly". */
 
 

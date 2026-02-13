@@ -63,14 +63,16 @@
 
   /* Hero Video - Optimize for mobile */
   .hero-video-bg {
-    display: block !important;
-    opacity: 0.5; /* Slightly reduce on mobile for better text visibility */
+    display: none !important;
   }
 
   /* Fallback Background for Hero on Mobile */
   .hero {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    /* Optional: Add a subtle pattern or static image here if desired */
+    background-image: url('../assets/images/profile.jpg'); /* Fallback image if needed, or keeping simple gradient */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
   }
 
   /* Reduce wash/blur on heavy elements for performance */

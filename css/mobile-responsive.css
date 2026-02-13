@@ -213,6 +213,13 @@
   body {
     cursor: auto;
   }
+  /* Disable Modal Animations for Mobile */
+  .modal-content {
+    animation: none !important;
+    transform: none !important;
+    border: 2px solid var(--project-glow-color, var(--accent-color)) !important; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
+  }
 }
 
 /* Small Mobile - 480px and below */

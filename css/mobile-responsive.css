@@ -79,43 +79,166 @@
   .navbar, .about-text, .card-content {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    background: rgba(20, 20, 20, 0.95) !important; /* Solid fallback */
+    background: var(--card-bg) !important; /* Use variable to support Light Mode */
+    box-shadow: none !important; /* Remove heavy shadows */
+    color: var(--text-light) !important; /* Ensure text matches theme */
   }
 
-  /* About Section Mobile */
+  /* Disable Continuous Animations */
+  .navbar {
+    animation: none !important;
+  }
+  
+  .logo {
+    animation: none !important;
+    background: var(--text-light) !important;
+    -webkit-text-fill-color: var(--text-light) !important;
+  }
+
+  .profile-img-container::before,
+  .profile-img-container::after {
+    animation: none !important;
+    display: none !important; /* Remove spinning borders entirely */
+  }
+  
+  .profile-img {
+    border: 3px solid var(--accent-color); /* Simple border instead */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+
+  /* About Section Mobile - Horizontal Carousel */
   .slider-3d-container {
-    width: 250px;
-    height: 250px;
-    margin-top: 30px;
+    perspective: none;
+    width: 100%;
+    max-width: 100vw; /* Ensure full width */
+    height: 50vh; /* Fill screen vertically (half screen for better visibility) */
+    min-height: 400px;
+    margin-top: 20px;
+    overflow: hidden; /* Hide container overflow for mask */
+    padding: 0;
+    
+    /* Fade to edges effect - Tighter mask for left edge visibility */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
+    
+    display: flex;
+    align-items: center; /* Vertically center the slider */
+  }
+
+  .slider-3d-cylinder {
+    animation: none !important;
+    transform: none !important;
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill container */
+    display: flex; /* Flex row for carousel */
+    flex-wrap: nowrap !important; /* Prevent wrapping */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start;
+    gap: 20px; /* Increased gap */
+    overflow-x: auto; /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory; /* Snap behavior */
+    padding: 0 40% 0 10px; /* Start near left edge, huge right padding to allow last item center/scroll */
+    box-sizing: border-box; /* Include padding in width */
+    
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    
+    /* Hide Scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  
+  .slider-3d-cylinder::-webkit-scrollbar { 
+    display: none;  /* Chrome/Safari */
   }
 
   .slider-item {
-    width: 80px;
-    height: 120px;
-    margin-left: -40px;
-    margin-top: -80px;
+    position: relative;
+    top: auto;
+    left: auto;
+    min-width: 100px; /* Fixed width for carousel items */
+    width: 100px;
+    height: auto;
+    margin: 0;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg); /* Use theme variable */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    scroll-snap-align: center; /* Snap to center */
+    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
-
-  .slider-item {
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  
+  .slider-item:first-child {
+      margin-left: 0;
+  }
+  
+  .slider-item:last-child {
+      margin-right: 0;
+  }
+  
+  .slider-item:hover {
+     transform: scale(1.05) !important;
+     background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-swipe-hint {
+      display: flex !important;
+      background: transparent !important; /* No background */
+      border: none !important; /* No border */
+      min-width: 60px !important; /* Smaller width since no text */
+      width: 60px !important;
+      box-shadow: none !important;
+  }
+  
+  .mobile-swipe-hint .software-icon {
+      margin-bottom: 0 !important; /* Center vertically */
+      animation: swipeAnim 2s infinite;
+      color: var(--accent-color);
+      opacity: 0.8;
+  }
+  
+  @keyframes swipeAnim {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-5px); }
   }
 
   .card-content {
-    border-radius: 10px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    height: auto;
+    padding: 0;
   }
 
   .software-icon {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
   }
 
   .software-img-wrapper img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
   }
 
   .slider-item span {
-    font-size: 0.7rem;
-    padding: 3px 8px;
+    position: static;
+    transform: none;
+    opacity: 1;
+    font-size: 0.85rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 8px;
+    color: var(--text-light); /* Ensure text follows theme */
+    font-weight: 600;
   }
 
   .about-text {
@@ -123,7 +246,7 @@
     padding: 20px;
     margin-bottom: 20px;
   }
-
+  
   /* Shadow adjustment for mobile */
   #about::before {
     height: 150px;
@@ -140,9 +263,16 @@
   }
 
   .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 10px;
+  }
+  
+  .project-card {
+    width: 100%;
+    /* Ensure no heavy hover transforms liek tilt if any exist */
+    transform: none !important;
   }
 
   /* Modal adjustments */
@@ -280,11 +410,26 @@
   /* Navbar - Further adjustments */
   .navbar {
     width: 95%;
+    min-width: unset !important; /* Fix for layout issue */
     padding: 8px 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between; /* Ensure proper spacing */
   }
 
   .logo {
     font-size: 1rem;
+    margin-right: 0; /* Remove extra margin */
+    animation: none !important;
+    background: none !important; /* Remove white box */
+    -webkit-text-fill-color: currentColor !important; /* Use text color */
+    background-clip: unset !important; /* Reset clip */
+    -webkit-background-clip: unset !important;
+    color: var(--text-light) !important; /* Ensure visible */
+  }
+  
+  .nav-links {
+    display: none; /* Hide desktop links on mobile if not already handled */
   }
 
   /* Portfolio */

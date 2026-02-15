@@ -604,6 +604,10 @@ section {
     margin-top: 50px; 
 }
 
+.mobile-swipe-hint {
+    display: none !important;
+}
+
 .slider-3d-cylinder {
     position: relative;
     width: 100%;
@@ -1207,9 +1211,7 @@ section {
     transform: translateY(-2px);
     border-color: var(--accent-color);
 }
-  backdrop-filter: blur(5px);
-  transition: all 0.3s;
-}
+
 
 .mobile-option-btn:hover, .mobile-option-btn:active {
   background: var(--accent-color);

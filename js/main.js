@@ -191,6 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Parallax / Response with Screen
         window.addEventListener('scroll', () => {
+             // Disable heavy scroll calculations on mobile
+             if (window.innerWidth < 768) return;
+
              const scrolled = window.scrollY;
              
              // Move background elements slowly

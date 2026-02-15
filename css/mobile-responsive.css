@@ -3,8 +3,8 @@
    COMPREHENSIVE MOBILE RESPONSIVE STYLES
    ============================================ */
 
-/* Tablet and Mobile - 768px and below */
-@media (max-width: 768px) {
+/* Tablet and Mobile - 1024px and below */
+@media (max-width: 1024px) {
   /* Global Section Adjustments */
   section {
     padding: 60px 15px;

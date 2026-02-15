@@ -191,8 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Parallax / Response with Screen
         window.addEventListener('scroll', () => {
-             // Disable heavy scroll calculations on mobile
-             if (window.innerWidth < 768) return;
+             // Disable heavy scroll calculations on mobile/tablets
+             if (window.innerWidth < 1024) return;
 
              const scrolled = window.scrollY;
              
@@ -572,8 +572,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Custom Cursor ---
     function initCursor() {
-        // Disable on touch devices and small screens
-        if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768) return;
+        // Disable on touch devices and small screens (increased to 1024px for performance on tablets/low-end laptops)
+        if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 1024) return;
 
         const cursor = document.querySelector('.cursor');
         const follower = document.querySelector('.cursor-follower');
@@ -613,8 +613,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Geometric Web Particles ---
     function initParticles() {
-        // Disable heavy particles on mobile
-        if (window.innerWidth < 768) return;
+        // Disable heavy particles on mobile and tablets (save battery/CPU)
+        if (window.innerWidth < 1024) return;
 
         const canvas = document.getElementById('about-particles');
         if (!canvas) return;

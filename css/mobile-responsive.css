@@ -17,8 +17,15 @@
   }
 
   /* Hero Section Mobile */
-  .hero {
-    padding: 80px 20px 60px;
+  /* PERFORMANCE OPTIMIZATION: Remove heavy effects */
+  .picasso-bg {
+    filter: none !important; /* HUGE performance boost */
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a1a 100%) !important; /* Simple static gradient */
+    opacity: 1 !important;
+  }
+  
+  #hero-particles, #about-particles, .cursor, .cursor-follower {
+    display: none !important; /* Ensure these are hidden and not rendering */
   }
 
   .hero-content {

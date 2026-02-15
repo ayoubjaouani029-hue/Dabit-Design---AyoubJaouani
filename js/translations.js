@@ -45,7 +45,7 @@ const translations = {
       <strong>| One does not realize the value of a blessing until it is lost |</strong>
     `,
     scenario_title: "Scenario: I wish I hadn't gone out",
-    podcast_title: "Podcast: Design & Tech",
+    podcast_title: "Podcast: Childhood Project",
     read_more: "Read More",
     watch_podcasts: "Watch My Podcasts",
 
@@ -120,7 +120,7 @@ const translations = {
     read_more: "اقرأ المزيد",
     watch_podcasts: "شاهد البودكاست",
     scenario_title: "سيناريو: يا ليتني لو لم أخرج",
-    podcast_title: "بودكاست: تصميم وتقنية",
+    podcast_title: "بودكاست: مشروع الطفولة",
     scenario_desc: `
       <strong>الفكرة:</strong> تأخذ الأحداث منحى عكسيا عندما تعدل الحياة بين الطفل المظلوم والأب الظالم.<br><br>
       <strong>الملخص:</strong> (فلم؟ مسلسل؟) بعنوان "يا ليتني لم أخرج"، هو (دراما – إثارة – غموض)، يروي قصة حسن الصغير الذي تجبره الظروف على مغادرة منزله بسبب حالته الاجتماعية البائسة والكئيبة، التي يعيشها مع والديه المزيفين الفقيرين ماديا ومعنويا، بحثا عن ملاذ يلقى فيه راحة باله وجسمه، فتأخذه الأحداث إلى خوض مغامرة مثيرة مع الطبيبة رغد، كل هذه الأقدار ستساعد حسن على تحقيق شيء كان مستحيل الحصول.<br><br>

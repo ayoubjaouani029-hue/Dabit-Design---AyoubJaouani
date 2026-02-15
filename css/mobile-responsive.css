@@ -311,6 +311,39 @@
 
   .achievement-icon {
     font-size: 3rem;
+    text-shadow: none !important;
+  }
+
+  /* Simplify Achievements for Mobile - No Glow, No 3D */
+  .achievement-content, 
+  .switcher-btn.active, 
+  .achievement-slide:hover .achievement-content {
+      box-shadow: none !important;
+      border-color: var(--glass-border) !important;
+      background: var(--card-bg) !important;
+      transform: none !important;
+  }
+
+  /* Disable 3D Book/Clapper/Youtube Animations and Visuals */
+  .book-visual, 
+  .clapperboard-visual, 
+  .youtube-visual {
+      display: none !important;
+  }
+
+  /* Reset Slide Animation to simple fade */
+  .achievement-slide {
+      animation: none !important;
+  }
+
+  .achievement-slide.active {
+      animation: simpleFadeIn 0.3s ease forwards !important;
+      transform: none !important;
+  }
+  
+  @keyframes simpleFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
   }
 
   /* Contact Section Mobile */
